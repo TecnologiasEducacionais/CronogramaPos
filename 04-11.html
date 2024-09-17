@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>UNISUAM - Graduação MUDE | Calendário Acadêmico</title>
+
+  <!-- Icons & Fonts -->
+  <link rel="icon" href="https://hotsite.unisuam.edu.br/Documentos_Institucionais/Imagens/PNG/Icon/Unisuam/icon_Coruja.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=latin-ext">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body{
+      background:url(https://hotsite.unisuam.edu.br/Documentos_Institucionais/Imagens/PNG/Background/background_Main_Papel.png) repeat-x fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow-x: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      word-wrap: break-word;
+    }
+
+    ul{
+      padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+      font-family: "PT Sans", sans-serif, arial !important;
+    }
+
+    /* Scrollbars */
+    body::-webkit-scrollbar {
+      width: 5px;
+      overflow: visible;
+      background: #ffffff;
+    }
+    body::-webkit-scrollbar-track {
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+    body::-webkit-scrollbar-thumb {
+      border-radius: 1px;
+      background-color: #666666;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-left: solid 1px #ffffff;
+    }
+    body::-webkit-scrollbar-thumb:hover{
+      background-color: #333333;
+    }
+
+    /* HEADER */
+    .conteudoTopo{
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 25px;
+      background: #004070;
+      background-size: cover;
+      background-position: center;
+    }
+    .nomeTopo{
+      font-size: 32px;
+      text-align: center;
+      padding: 1px 0;
+      font-weight: bolder;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    /* MAIN */
+    /*botão*/
+    .conteudoMenu{
+      margin: 20px auto;
+      padding: 15px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    .linkMenu{
+      margin: auto 20px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      color:#ffffff;
+      padding: 10px;
+      font-size: 16px;
+      width: 30%;
+      background: #EF7D00;
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+    .linkMenu:hover{
+      background-color: #EA5A33;
+    }
+    .imgBotao{
+      height: 16px;
+      padding: 0px 10px;
+    }
+
+    /*conteudo*/
+    .calendario{
+      margin: 2.5px auto;
+      padding: 0px 15px;
+      display: flex;
+      border-radius: 8px;
+    }
+
+    .conteudoCalendario{
+      width: 100%;
+      display: block;
+      overflow-x: scroll;
+    }
+    .conteudoCalendario::-webkit-scrollbar {
+      width: 12px;
+    }
+    .conteudoCalendario::-webkit-scrollbar-track {
+      background: #ffffff00;
+    }
+
+    .tabelaCalendario{
+      margin: 75px auto;
+      border-radius: 1px;
+      background-color: #ffffff;
+      padding: 4px;
+    }
+    td{
+      padding: 20px;
+    }
+    .titulo{
+      font-weight: bold;
+      background-color: #666666;
+      color: #ffffff;
+    }
+    .evento, .nomeTitulo{
+      text-align: center;
+    }
+    .nomeTitulo{
+      padding: 5px 50px;
+    }
+    .evento:nth-child(odd){
+      background-color: #E0E0E0;
+    }
+    .evento:nth-child(even){
+      background-color: #F0F0F0;
+    }
+    .descricao{
+      color: #000000;
+      text-align: left;
+    }
+    .dataInicio, .dataFim{
+      color: #004070;
+    }
+    /* Deixa o texto em negrito para os dois últimos eventos */
+    .atividade{
+      font-weight: bold;
+    }
+
+    @media only screen and (max-width: 630px){
+      .linkMenu{
+        width: auto;
+      }
+    }
+    @media only screen and (max-width: 455px){
+      .linkMenu{
+        width: 35%;
+      }
+      .imgBotao{
+        padding: 0px 12px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="conteudoTopo">
+    <h1 class="nomeTopo">Calendário Acadêmico</h1>
+  </section>
+  
+  <section class="calendario">
+    <div class="conteudoCalendario">
+      <table class="tabelaCalendario">
+        <tbody class="copoTabela">
+          <tr class="titulo">
+            <td class="nomeTitulo">Evento</td>
+            <td class="nomeTitulo">Data de Início</td>
+            <td class="nomeTitulo">Data de Fim</td>
+          </tr>
+          <tr class="evento">
+            <td class="descricaoEvento descricao">Estudo da Unidade 1</td>
+            <td class="descricaoEvento dataInicio">04/11/2024</td>
+            <td class="descricaoEvento dataFim">09/11/2024</td>
+          </tr>
+          <tr class="evento">
+            <td class="descricaoEvento descricao">Estudo da Unidade 2</td>
+            <td class="descricaoEvento dataInicio">10/11/2024</td>
+            <td class="descricaoEvento dataFim">15/11/2024</td>
+          </tr>
+          <tr class="evento">
+            <td class="descricaoEvento descricao">Estudo da Unidade 3</td>
+            <td class="descricaoEvento dataInicio">16/11/2024</td>
+            <td class="descricaoEvento dataFim">21/11/2024</td>
+          </tr>
+          <tr class="evento">
+            <td class="descricaoEvento descricao">Estudo da Unidade 4</td>
+            <td class="descricaoEvento dataInicio">22/11/2024</td>
+            <td class="descricaoEvento dataFim">27/11/2024</td>
+          </tr>
+          <tr class="evento">
+            <td class="descricaoEvento descricao">Estudo da Unidade 5</td>
+            <td class="descricaoEvento dataInicio">28/11/2024</td>
+            <td class="descricaoEvento dataFim">03/12/2024</td>
+          </tr>
+          <tr class="evento">
+            <td class="descricaoEvento descricao">Estudo da Unidade 6</td>
+            <td class="descricaoEvento dataInicio">04/12/2024</td>
+            <td class="descricaoEvento dataFim">09/12/2024</td>
+          </tr>
+          <tr class="evento atividade">
+            <td class="descricaoEvento descricao">Prova Final</td>
+            <td class="descricaoEvento dataInicio">10/12/2024</td>
+            <td class="descricaoEvento dataFim">15/12/2024</td>
+          </tr>
+          <tr class="evento atividade">
+            <td class="descricaoEvento descricao">Prova Substitutiva</td>
+            <td class="descricaoEvento dataInicio">16/12/2024</td>
+            <td class="descricaoEvento dataFim">23/12/2024</td>
+          </tr>                  
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
+
+</html>
